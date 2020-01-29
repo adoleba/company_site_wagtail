@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{{ page.header_title }}<br />
-{{ page.header_description }}<br />
-{{ page.about_intro }}<br />
-{{ page.about_description }}<br />
-{{ page.first_card_title }}<br />
-{{ page.first_card_description }}<br />
-{{ page.second_card_title }}<br />
-{{ page.second_card_description }}<br />
-{{ page.third_card_title }}<br />
-{{ page.third_card_description }}<br />
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+    {{ page.header_title }}<br />
+    {{ page.header_description }}<br />
+    {{ page.about_intro }}<br />
+    {{ page.about_description }}<br />
+    {{ page.first_card_title }}<br />
+    {{ page.first_card_description }}<br />
+    {{ page.second_card_title }}<br />
+    {{ page.second_card_description }}<br />
+    {{ page.third_card_title }}<br />
+    {{ page.third_card_description }}<br />
+
+{% endblock %}

@@ -38,6 +38,7 @@ WAGTAIL_SITE_NAME = 'company_site_wagtail'
 
 INSTALLED_APPS = [
     'home',
+    'blog',
 
     'django.contrib.admin',
     'django.contrib.auth',

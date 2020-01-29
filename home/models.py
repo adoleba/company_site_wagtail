@@ -6,7 +6,7 @@ from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.core.models import Page
 
 
-class MainPage(Page):
+class HomePage(Page):
     header_title = models.CharField(max_length=500)
     header_description = models.TextField()
     about_intro = models.CharField(max_length=200)

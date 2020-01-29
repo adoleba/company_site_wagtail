@@ -412,7 +412,7 @@
             $(this).parent().find('.dropdown').removeClass("on");
             if( $(this).parents('.dropdown-menu').length > 0 ) { // child
                 $(this).parents('.dropdown-menu').find('.dropdown-menu').not( $( '.dropdown-menu', this ) ).stop().fadeOut('fast');
-            } else { // main
+            } else { // home
                 $(this).parents('.bootsnav .nav').find('.dropdown-menu').not( $( '.dropdown-menu', this ) ).stop().fadeOut('fast');
                 $(":not(.second-level)", this).find('.third-level').stop().fadeOut('fast');
             }

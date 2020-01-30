@@ -4,8 +4,65 @@
 
 {% block content %}
 
-    {{ page.intro }} <br />
-    {{ page.body | richtext }} <br />
-    {{ page.created }}
+        <section class="wow fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
+        <div class="container">
+            <div class="row equalize xs-equalize-auto">
+                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
+                    <div class="display-table-cell vertical-align-middle text-left xs-text-center">
+                        <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">{{ page.title }}</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-text-left xs-margin-10px-top">
+                    <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
+                        <ul class="xs-text-center text-uppercase">
+                            <li class="text-dark-gray">{{ page.created }}</li>
+                            <li class="text-dark-gray">{{ page.owner }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 center-col last-paragraph-no-margin text-center">
+                    <h5 class="alt-font font-weight-600 text-extra-dark-gray">{% if page.intro %}{{ page.intro }}{% endif %}</h5>
+                    <p class="text-large line-height-30 text-medium-gray text-justify xs-text-center xs-line-height-26">{{ page.body |richtext }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wow fadeIn no-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-sm-12 col-xs-12 center-col no-padding">
+                    <div class="col-md-8 col-sm-6 col-xs-12 text-left xs-text-center xs-margin-10px-bottom">
+                        <div class="tag-cloud">
+                            <a href="#" class="tag-cloud">category.name</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-sm-12 col-xs-12 center-col margin-50px-top sm-margin-30px-top wow fadeInUp">
+                    <div class="display-table width-100 border-all border-color-extra-light-gray padding-50px-all sm-padding-30px-all xs-padding-20px-all">
+                        <div class="display-table-cell width-130px text-center vertical-align-top xs-margin-15px-bottom xs-width-100 xs-display-block xs-text-center">
+                            <img src="#" class="img-circle width-100px height-100px" alt=""/>
+                        </div>
+                        <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
+                            <p class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small">{{ page.owner }}</p>
+                            <p>Info o autorze</p>
+
+                            <a class="btn btn-very-small btn-black margin-20px-top">All author posts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

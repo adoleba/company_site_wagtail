@@ -24,7 +24,15 @@
                         <div class="blog-post blog-post-style2">
                             <div class="post-details">
                                 <div class="tag-cloud">
-                                    <a href="#" class="tag-cloud">Category</a>
+                                    {% with categories=post.specific.categories.all %}
+                                        <div class="tag-cloud">
+                                            {% if categories %}
+                                                {% for category in categories %}
+                                                    <a href="#" class="tag-cloud">{{ category.name }}</a>
+                                                {% endfor %}
+                                            {% endif %}
+                                        </div>
+                                    {% endwith %}
                                 </div>
 
                                 <span class="text-large alt-font width-85 md-width-95 margin-15px-bottom display-block">

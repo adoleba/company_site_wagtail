@@ -41,7 +41,13 @@
                 <div class="col-md-10 col-sm-12 col-xs-12 center-col no-padding">
                     <div class="col-md-8 col-sm-6 col-xs-12 text-left xs-text-center xs-margin-10px-bottom">
                         <div class="tag-cloud">
-                            <a href="#" class="tag-cloud">category.name</a>
+                            {% with categories=page.categories.all %}
+                                {% if categories %}
+                                    {% for category in categories %}
+                                        <a href="#" class="tag-cloud">{{ category.name }}</a>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
                         </div>
                     </div>
 

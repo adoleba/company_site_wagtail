@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load wagtailcore_tags %}
+
 {% block content %}
 
     <section class="wow fadeIn bg-light-gray padding-50px-tb page-title-small top-space">
@@ -16,66 +18,33 @@
     <section class="wow fadeIn">
         <div class="container">
             <div class="row equalize xs-equalize-auto">
-                <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
-                    <div class="blog-post blog-post-style2">
-                        <div class="post-details">
-                            <div class="tag-cloud">
-                                <a href="#" class="tag-cloud">Category</a>
-                            </div>
 
-                            <span class="text-large alt-font width-85 md-width-95 margin-15px-bottom display-block">
-                                <a href="#" class="text-extra-dark-gray">I try to look at design from a more conceptual standpoint </a>
-                            </span>
-                            <p class="width-90 xs-margin-15px-bottom xs-width-100">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text...
-                            </p>
-                            <div class="author border-top border-color-extra-light-gray padding-25px-top xs-padding-15px-top">
-                                <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left">17 july 2017 | by <a href="#" class="text-medium-gray">Jay Benjamin</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% for post in posts %}
+                    <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
+                        <div class="blog-post blog-post-style2">
+                            <div class="post-details">
+                                <div class="tag-cloud">
+                                    <a href="#" class="tag-cloud">Category</a>
+                                </div>
 
-
-                <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
-                    <div class="blog-post blog-post-style2">
-                        <div class="post-details">
-                            <div class="tag-cloud">
-                                <a href="#" class="tag-cloud">Category</a>
-                            </div>
-
-                            <span class="text-large alt-font width-85 md-width-95 margin-15px-bottom display-block">
-                                <a href="#" class="text-extra-dark-gray">I try to look at design from a more conceptual standpoint </a>
-                            </span>
-                            <p class="width-90 xs-margin-15px-bottom xs-width-100">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text...
-                            </p>
-                            <div class="author border-top border-color-extra-light-gray padding-25px-top xs-padding-15px-top">
-                                <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left">17 july 2017 | by <a href="#" class="text-medium-gray">Jay Benjamin</a></span>
+                                <span class="text-large alt-font width-85 md-width-95 margin-15px-bottom display-block">
+                                    <a href="{% pageurl post %}" class="text-extra-dark-gray">{{post.specific.title}}</a>
+                                </span>
+                                <p class="width-90 xs-margin-15px-bottom xs-width-100">
+                                    {% if post.specific.intro %}
+                                        {{ post.specific.intro | truncatewords:20}}
+                                    {% else %}
+                                        {{ post.specific.body | truncatewords:20 |richtext}}
+                                    {% endif %}
+                                </p>
+                                <div class="author border-top border-color-extra-light-gray padding-25px-top xs-padding-15px-top">
+                                    <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left">
+                                        {{ post.specific.created }} | by <a href="#" class="text-medium-gray">{{ post.owner }}</a></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
-                    <div class="blog-post blog-post-style2">
-                        <div class="post-details">
-                            <div class="tag-cloud">
-                                <a href="#" class="tag-cloud">Category</a>
-                            </div>
-
-                            <span class="text-large alt-font width-85 md-width-95 margin-15px-bottom display-block">
-                                <a href="#" class="text-extra-dark-gray">I try to look at design from a more conceptual standpoint </a>
-                            </span>
-                            <p class="width-90 xs-margin-15px-bottom xs-width-100">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text...
-                            </p>
-                            <div class="author border-top border-color-extra-light-gray padding-25px-top xs-padding-15px-top">
-                                <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left">17 july 2017 | by <a href="#" class="text-medium-gray">Jay Benjamin</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
         </div>

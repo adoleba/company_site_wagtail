@@ -15,6 +15,12 @@ class BlogPage(Page):
         FieldPanel('description', classname="full")
     ]
 
+    def get_context(self, request, *args, **kwargs):
+        context = super().get_context(request)
+        posts = self.get_children().live().order_by('-first_published_at')
+        context['posts'] = posts
+        return context
+
 
 class PostPage(Page):
     intro = models.TextField(max_length=300, blank=True)
@@ -22,8 +28,8 @@ class PostPage(Page):
     created = models.DateTimeField(auto_now_add=datetime.now)
 
     content_panels = Page.content_panels + [
-        FieldPanel('intro'),
-        FieldPanel('body')
+        FieldPanel('intro', classname="full"),
+        FieldPanel('body', classname="full")
     ]
 
     def get_absolute_url(self):

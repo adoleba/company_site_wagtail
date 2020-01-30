@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
+                    <div class="display-table-cell vertical-align-middle text-center">
+                        <h1 class="text-extra-dark-gray alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">
+                            {{ page.header_title }}
+                        </h1>
+                        <span class="opacity6 alt-font">{{ page.header_description }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wow fadeIn bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-11 col-xs-12 center-col text-center wow fadeInUp margin-eight-bottom">
+                    <div class="alt-font text-medium-gray margin-5px-bottom text-uppercase text-small">{{ page.about_intro }}</div>
+                    <h6 class="font-weight-300 text-extra-dark-gray no-margin-bottom">{{ page.about_description }}</h6>
+                </div>
+            </div>
+            <div class="row equalize xs-equalize-auto">
+                <div class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp">
+                    <div class="bg-white text-center">
+                        <div class="padding-45px-all sm-padding-15px-all inner-match-height">
+                            <span class="text-extra-dark-gray font-weight-600 display-block alt-font margin-10px-bottom">{{ page.first_card_title }}</span>
+                            <p>{{ page.first_card_description }}</p>
+                            <a href="#" class="btn btn-small btn-rounded btn-transparent-dark-gray">About Us <i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="bg-white text-center">
+                        <div class="padding-45px-all sm-padding-15px-all inner-match-height">
+                            <span class="text-extra-dark-gray font-weight-600 display-block alt-font margin-10px-bottom">{{ page.second_card_title }}</span>
+                            <p>{{ page.second_card_description }}</p>
+                            <a href="#" class="btn btn-small btn-rounded btn-transparent-dark-gray">Contact Us <i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-no-margin-bottom wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="bg-white text-center">
+                        <div class="padding-45px-all sm-padding-15px-all inner-match-height">
+                            <span class="text-extra-dark-gray font-weight-600 display-block alt-font margin-10px-bottom">{{ page.third_card_title }}</span>
+                            <p>{{ page.third_card_description }}</p>
+                            <a href="#" class="btn btn-small btn-rounded btn-transparent-dark-gray">Blog <i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

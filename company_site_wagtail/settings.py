@@ -38,6 +38,7 @@ WAGTAIL_SITE_NAME = 'company_site_wagtail'
 
 INSTALLED_APPS = [
     'home',
+    'blog',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -60,6 +62,8 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'el_pagination',
+    'django_comments'
 ]
 
 MIDDLEWARE = [
@@ -142,3 +146,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [root('static')]
 MEDIA_ROOT = root('media')
 MEDIA_URL = '/media/'
+
+
+SITE_ID = 1

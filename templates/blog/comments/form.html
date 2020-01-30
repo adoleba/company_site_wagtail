@@ -1,0 +1,39 @@
+{% load comments  %}
+{% get_comment_form for page as form %}
+
+    <section class="wow fadeIn bg-light-gray">
+        <div class="container">
+            <form action="{% comment_form_target %}" method="post">
+            {% csrf_token %}
+                <div class="row">
+                    <input type="hidden" name="next" value="{{ request.path }}"/>
+                    {% for field in form %}
+                        {% if field.is_hidden %}<div>{{ field }}</div>{% endif %}
+                    {% endfor %}
+
+                    <div class="col-md-10 col-sm-12 col-xs-12 center-col text-center margin-80px-bottom xs-margin-40px-bottom">
+                        <div class="position-relative overflow-hidden width-100">
+                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">Write A Comment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 wow fadeIn center-col">
+                        <div class="padding-fifteen-all bg-white border-radius-6 md-padding-seven-all">
+                            <div class="input-bg">
+                                Name:<br />
+                                {{ form.name }}
+                                E-mail:<br />
+                                {{ form.email}}
+                                Message<br />
+                                {{ form.comment }}<br />
+                                <button type="submit" class="btn btn-small border-radius-4 btn-black">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>

@@ -146,3 +146,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [root('static')]
 MEDIA_ROOT = root('media')
 MEDIA_URL = '/media/'
+
+
+SITE_ID = 1

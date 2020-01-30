@@ -72,23 +72,22 @@
     </section>
 
 
-    <section class="wow fadeIn">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-sm-12 col-xs-12 center-col text-center margin-80px-bottom sm-margin-50px-bottom xs-margin-15px-bottom">
-                    <div class="position-relative overflow-hidden width-100">
-                        {% get_comment_count for blog.blogpage object_pk as comment_count %}
-                        <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">
-                            {{ comment_count }} komentarzy
-                        </span>
-                    </div>
+    <section class="wow fadeIn no-padding">
+        <div class="row">
+            <div class="col-md-10 col-sm-12 col-xs-12 center-col text-center">
+                <div class="position-relative overflow-hidden">
+                    {% get_comment_count for page as comment_count %}
+                    <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">
+                        {{ comment_count }} komentarzy
+                    </span>
                 </div>
             </div>
-
         </div>
     </section>
 
-    {% include 'blog/comments/comment_form.html' %}
+    {% include 'blog/comments/list.html' %}
+
+    {% include 'blog/comments/form.html' %}
 
 
 {% endblock %}

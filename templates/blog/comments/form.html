@@ -6,6 +6,11 @@
             <form action="{% comment_form_target %}" method="post">
             {% csrf_token %}
                 <div class="row">
+                    <input type="hidden" name="next" value="{{ request.path }}"/>
+                    {% for field in form %}
+                        {% if field.is_hidden %}<div>{{ field }}</div>{% endif %}
+                    {% endfor %}
+
                     <div class="col-md-10 col-sm-12 col-xs-12 center-col text-center margin-80px-bottom xs-margin-40px-bottom">
                         <div class="position-relative overflow-hidden width-100">
                             <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">Write A Comment</span>

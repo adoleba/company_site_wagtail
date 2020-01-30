@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+    {{ page.intro }} <br />
+    {{ page.body | richtext }} <br />
+    {{ page.created }}
+
+{% endblock %}

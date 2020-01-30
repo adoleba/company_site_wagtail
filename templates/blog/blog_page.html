@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags el_pagination_tags %}
 
 {% block content %}
 
@@ -19,7 +19,9 @@
         <div class="container">
             <div class="row equalize xs-equalize-auto">
 
+                {% lazy_paginate 1 posts %}
                 {% for post in posts %}
+
                     <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
                         <div class="blog-post blog-post-style2">
                             <div class="post-details">
@@ -55,6 +57,8 @@
                 {% endfor %}
 
             </div>
+            {% show_pages %}
+
         </div>
     </section>
 

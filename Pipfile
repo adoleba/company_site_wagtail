@@ -9,6 +9,7 @@ verify_ssl = true
 django = "==2.2.8"
 wagtail = "==2.7.1"
 django-environ = "==0.4.5"
+django-el-pagination = "==3.2.4"
 
 [requires]
 python_version = "==3.8"

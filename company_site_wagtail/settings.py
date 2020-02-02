@@ -154,3 +154,5 @@ MEDIA_URL = '/media/'
 
 
 SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'

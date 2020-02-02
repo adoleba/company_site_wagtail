@@ -1,6 +1,9 @@
+from datetime import date
+
 from django.db import models
 from modelcluster.fields import ParentalKey
 from wagtail.admin.edit_handlers import InlinePanel, FieldPanel, FieldRowPanel, MultiFieldPanel
+from wagtail.admin.mail import send_mail
 from wagtail.contrib.forms.models import AbstractFormField, AbstractEmailForm
 from wagtail.core.fields import RichTextField
 
@@ -10,6 +13,7 @@ class FormField(AbstractFormField):
 
 
 class Contact(AbstractEmailForm):
+    thank_you_intro = models.TextField()
     thank_you_text = RichTextField(blank=True)
     intro = models.TextField()
     body = models.TextField()
@@ -18,6 +22,7 @@ class Contact(AbstractEmailForm):
         FieldPanel('intro', classname="full"),
         FieldPanel('body', classname="full"),
         InlinePanel('custom_form_fields', label='Form fields'),
+        FieldPanel('thank_you_intro', classname='full'),
         FieldPanel('thank_you_text', classname='full'),
         MultiFieldPanel([
             FieldRowPanel([

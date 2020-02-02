@@ -1,3 +1,5 @@
+{% load menu_tags %}
+
 <header>
     <nav class="navbar navbar-default bootsnav bg-transparent navbar-scroll-top nav-box-width header-light">
         <div class="container-fluid nav-header-container">
@@ -6,21 +8,7 @@
                     <a href="#">Logo</a>
                 </div>
 
-                <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
-                    <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-toggle-1">
-                        <span class="sr-only">toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
-                        <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
-                            <li class="dropdown megamenu-fw">
-                                <a href="#">page</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                {% main_menu template="menu.html" %}
 
                 <div class="col-md-2 col-xs-5 width-auto">
                     <div class="header-social-icon xs-display-none">

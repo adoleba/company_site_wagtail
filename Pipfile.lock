@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a04be85d8c160db85a9d0596c167bd5ca55e203ae373ebea54d74e13e75467dd"
+            "sha256": "a59fd44c711aea387e9dfee0e0f6c468c1e39254d3ae2a77926656030169d2db"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -45,6 +45,13 @@
             ],
             "index": "pypi",
             "version": "==2.2.8"
+        },
+        "django-cogwheels": {
+            "hashes": [
+                "sha256:197bd05e7114403d7301214b3f8a371c4fb6039cf21c811f099438b167b5ed21",
+                "sha256:848a4d9f2c96c582a4a4f2e7c276dfd95ab3905748cae13bb7c4b365a6717e94"
+            ],
+            "version": "==0.3"
         },
         "django-contrib-comments": {
             "hashes": [
@@ -200,6 +207,14 @@
             ],
             "index": "pypi",
             "version": "==2.7.1"
+        },
+        "wagtailmenus": {
+            "hashes": [
+                "sha256:1e0d37c4659bf20f2f645a1412cd63e88e6f89e692618e5a78301f5f9a148420",
+                "sha256:fd5fb569bc434cfcbaed8f4102702b46a7ea68979236a90e2c1203d284b91f60"
+            ],
+            "index": "pypi",
+            "version": "==3.0"
         },
         "webencodings": {
             "hashes": [

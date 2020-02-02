@@ -15,6 +15,7 @@ class BlogPage(Page):
     edited = models.DateTimeField(auto_now=datetime.now)
 
     content_panels = Page.content_panels + [
+        FieldPanel('intro', classname="full"),
         FieldPanel('description', classname="full")
     ]
 

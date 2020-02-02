@@ -11,10 +11,12 @@ class FormField(AbstractFormField):
 
 class Contact(AbstractEmailForm):
     thank_you_text = RichTextField(blank=True)
-    address = models.TextField()
+    intro = models.TextField()
+    body = models.TextField()
 
     content_panels = AbstractEmailForm.content_panels + [
-        FieldPanel('address', classname="full"),
+        FieldPanel('intro', classname="full"),
+        FieldPanel('body', classname="full"),
         InlinePanel('custom_form_fields', label='Form fields'),
         FieldPanel('thank_you_text', classname='full'),
         MultiFieldPanel([

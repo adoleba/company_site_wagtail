@@ -66,7 +66,8 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'el_pagination',
-    'django_comments'
+    'django_comments',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [

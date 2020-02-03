@@ -4,7 +4,6 @@
 
 {% block content %}
 
-    <p>test blocków</p>
     {% with blocks=self.body %}
         {% for block in blocks %}
             {% if block.block_type == 'grey_header' %}
@@ -13,13 +12,11 @@
                 {% include 'universal_page/blocks/blockquote.html' %}
             {% elif block.block_type == 'small_grey_header' %}
                 {% include 'universal_page/blocks/small_grey_header.html' %}
-            {% elif block.block_type == 'blockquote_with_header' %}
-                {% include 'universal_page/blocks/blockquote_with_header.html' %}
-            {% elif block.block_type == 'faq' %}
-                {% include 'universal_page/blocks/faq.html' %}
-            {% elif block.block_type == 'white_header_with_button' %}
-                {% include 'universal_page/blocks/white_header_with_button.html' %}
 
+            {% else %}
+                <section class="block-{{ block.block_type }}">
+                    {{ block }}
+                </section>
 
             {% endif %}
         {% endfor %}

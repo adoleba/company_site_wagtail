@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<section class="wow fadeIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 center-col">
+                <div class="panel-group accordion-style1" id="accordion-design">
+                    <div class="panel">
+                        {% with blocks=self %}
+                            {% for block in blocks %}
+                                {% if block.block_type == 'question' %}
+                                    <div class="panel-heading">
+                                        <p class="panel-title font-weight-500 text-extra-dark-gray text-uppercase">
+                                            {{ block.value }}
+                                            <span class="pull-right"><i class="ti-plus"></i></span>
+                                        </p>
+                                    </div>
+                                {% elif block.block_type == 'answer' %}
+                                    <div class="panel-body">
+                                        {{ block.value }}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

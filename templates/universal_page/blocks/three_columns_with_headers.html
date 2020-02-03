@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<section class="wow fadeIn">
+    <div class="container">
+        <div class="row">
+            {% with blocks=self %}
+                {% for block in blocks %}
+                    {% if block.block_type == 'column_no_1_header' %}
+                        <div class="col-md-4  col-sm-4 col-xs-12 sm-margin-40px-bottom xs-text-center wow fadeInRight">
+                            <h5 class="text-light-gray font-weight-300 alt-font no-margin-bottom">01</h5>
+                            <span class="text-extra-dark-gray alt-font text-large margin-15px-bottom display-block sm-margin-5px-bottom">
+                                {{ block.value }}</span>
+                    {% elif block.block_type == 'column_no_1_text' %}
+                        <p class="width-90 sm-width-100">{{ block.value }}</p>
+                            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink width-50px xs-center-col"></div>
+                        </div>
+                    {% elif block.block_type == 'column_no_2_header' %}
+                        <div class="col-md-4  col-sm-4 col-xs-12 sm-margin-40px-bottom xs-text-center wow fadeInRight" data-wow-delay="0.2s">
+                            <h5 class="text-light-gray font-weight-300 alt-font no-margin-bottom">02</h5>
+                                <span class="text-extra-dark-gray alt-font text-large margin-15px-bottom display-block sm-margin-5px-bottom">
+                                    {{ block.value }}</span>
+                    {% elif block.block_type == 'column_no_2_text' %}
+                        <p class="width-90 sm-width-100">{{ block.value }}</p>
+                            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink width-50px xs-center-col"></div>
+                        </div>
+                    {% elif block.block_type == 'column_no_3_header' %}
+                        <div class="col-md-4  col-sm-4 col-xs-12 sm-margin-40px-bottom xs-text-center wow fadeInRight" data-wow-delay="0.2s">
+                            <h5 class="text-light-gray font-weight-300 alt-font no-margin-bottom">03</h5>
+                                <span class="text-extra-dark-gray alt-font text-large margin-15px-bottom display-block sm-margin-5px-bottom">
+                                    {{ block.value }}</span>
+                    {% elif block.block_type == 'column_no_3_text' %}
+                        <p class="width-90 sm-width-100">{{ block.value }}</p>
+                            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink width-50px xs-center-col"></div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endwith %}
+        </div>
+    </div>
+</section>

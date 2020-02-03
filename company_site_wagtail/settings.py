@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'blog',
     'users',
+    'contact',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,7 +67,8 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'el_pagination',
-    'django_comments'
+    'django_comments',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -159,3 +161,11 @@ AUTH_USER_MODEL = 'users.User'
 WAGTAIL_USER_EDIT_FORM = 'users.forms.CustomUserEditForm'
 WAGTAIL_USER_CREATION_FORM = 'users.forms.CustomUserCreationForm'
 WAGTAIL_USER_CUSTOM_FIELDS = ['country', 'about', 'sex', 'birth_date']
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS')

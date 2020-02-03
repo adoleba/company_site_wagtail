@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static wagtailcore_tags %}
+
+{% block content %}
+
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
+                    <div class="display-table-cell vertical-align-middle text-center">
+                        <h1 class="text-extra-dark-gray alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">
+                            {{ page.thank_you_intro }}
+                        </h1>
+                        <span class="opacity6 alt-font">{{ page.thank_you_text | richtext }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

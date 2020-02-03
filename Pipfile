@@ -12,6 +12,7 @@ django-environ = "==0.4.5"
 django-el-pagination = "==3.2.4"
 django-contrib-comments = "==1.9.2"
 wagtailmenus = "==3.0"
+django-widget-tweaks = "==1.4.5"
 
 [requires]
 python_version = "==3.8"

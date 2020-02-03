@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+
+
+{% block content %}
+
+    <p>test blocków</p>
+    {% with blocks=self.body %}
+        {% for block in blocks %}
+            {% if block.block_type == 'grey_header' %}
+                {% include 'universal_page/blocks/grey_header.html'%}
+            {% elif block.block_type == 'blockquote' %}
+                {% include 'universal_page/blocks/blockquote.html' %}
+            {% elif block.block_type == 'small_grey_header' %}
+                {% include 'universal_page/blocks/small_grey_header.html' %}
+            {% elif block.block_type == 'blockquote_with_header' %}
+                {% include 'universal_page/blocks/blockquote_with_header.html' %}
+            {% elif block.block_type == 'faq' %}
+                {% include 'universal_page/blocks/faq.html' %}
+            {% elif block.block_type == 'white_header_with_button' %}
+                {% include 'universal_page/blocks/white_header_with_button.html' %}
+
+
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+
+{% endblock %}

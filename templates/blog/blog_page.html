@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row equalize xs-equalize-auto">
 
-                {% lazy_paginate 1 posts %}
+                {% lazy_paginate 2 posts %}
                 {% for post in posts %}
 
                     <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
@@ -30,7 +30,7 @@
                                         <div class="tag-cloud">
                                             {% if categories %}
                                                 {% for category in categories %}
-                                                    <a href="#" class="tag-cloud">{{ category.name }}</a>
+                                                    <a class="tag-cloud">{{ category.name }}</a>
                                                 {% endfor %}
                                             {% endif %}
                                         </div>
@@ -49,7 +49,11 @@
                                 </p>
                                 <div class="author border-top border-color-extra-light-gray padding-25px-top xs-padding-15px-top">
                                     <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left">
-                                        {{ post.specific.created }} | by <a href="#" class="text-medium-gray">{{ post.owner }}</a></span>
+                                        {{ post.specific.created }} | by
+                                        <a href="{% url 'users:user_profile' username=post.owner %}" class="text-medium-gray">
+                                            {{ post.owner }}
+                                        </a>
+                                    </span>
                                 </div>
                             </div>
                         </div>

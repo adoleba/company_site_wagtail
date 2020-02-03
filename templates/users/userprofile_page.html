@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+    <section class="wow fadeIn bg-light-gray padding-50px-tb page-title-small top-space">
+        <div class="container">
+            <div class="row equalize xs-equalize-auto">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
+                    <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Posty użytkownika {{ username }}</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="wow fadeIn">
+         <div class="container">
+             <div class="row equalize xs-equalize-auto">
+                 {% for post in posts %}
+                     <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
+                         <div class="blog-post blog-post-style2">
+                             <div class="post-details">
+                                 <div class="tag-cloud">
+                                     {% with categories=post.categories.all %}
+                                         <div class="tag-cloud">
+                                             {% if categories %}
+                                                 {% for category in categories %}
+                                                     <a class="tag-cloud">{{ category.name }}</a>
+                                                 {% endfor %}
+                                             {% endif %}
+                                        </div>
+                                    {% endwith %}
+                                </div>
+
+                                <span class="text-large alt-font width-85 md-width-95 margin-15px-bottom display-block">
+                                    <a href="{% pageurl post %}" class="text-extra-dark-gray">{{post.title}}</a>
+                                </span>
+                                <p class="width-90 xs-margin-15px-bottom xs-width-100">
+                                    {% if post.intro %}
+                                        {{ post.intro | truncatewords:20 }}
+                                    {% else %}
+                                        {{ post.body | truncatewords:20 }}
+                                    {% endif %}
+                                </p>
+                                <div class="author border-top border-color-extra-light-gray padding-25px-top xs-padding-15px-top">
+                                    <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left">
+                                        {{ post.created }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wow fadeIn no-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-sm-12 col-xs-12 center-col margin-50px-top sm-margin-30px-top wow fadeInUp">
+                    <div class="display-table width-100 border-all border-color-extra-light-gray padding-50px-all sm-padding-30px-all xs-padding-20px-all">
+                        <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
+                            <p class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small">
+                                {{ user.first_name }} {{ user.last_name }}</p>
+                            <p>{{ user.about }}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

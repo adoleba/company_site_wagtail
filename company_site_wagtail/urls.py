@@ -27,5 +27,6 @@ urlpatterns = [
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     path('comments/', include('django_comments.urls')),
+    path('users/', include('users.urls')),
     path('', include(wagtail_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

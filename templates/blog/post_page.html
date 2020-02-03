@@ -44,7 +44,7 @@
                             {% with categories=page.categories.all %}
                                 {% if categories %}
                                     {% for category in categories %}
-                                        <a href="#" class="tag-cloud">{{ category.name }}</a>
+                                        <a class="tag-cloud">{{ category.name }}</a>
                                     {% endfor %}
                                 {% endif %}
                             {% endwith %}
@@ -60,10 +60,11 @@
                             <img src="#" class="img-circle width-100px height-100px" alt=""/>
                         </div>
                         <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
-                            <p class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small">{{ page.owner }}</p>
-                            <p>Info o autorze</p>
+                            <p class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small">
+                                {{ page.owner.first_name  }} {{ page.owner.last_name  }}</p>
+                            <p>{{ page.owner.about }}</p>
 
-                            <a class="btn btn-very-small btn-black margin-20px-top">All author posts</a>
+                            <a href="{% url 'users:user_profile' username=page.owner %}" class="btn btn-very-small btn-black margin-20px-top">All author posts</a>
                         </div>
                     </div>
                 </div>

@@ -5,15 +5,14 @@ from users.models import User
 
 
 def user_profile(request, username):
-    user = User.objects.filter(username=username)
+    user = User.objects.filter(username__iexact=username)
+    ctx = {}
     for field in user:
-        about = field.about
-        first_name = field.first_name
-        last_name = field.last_name
-        username = field.username
+        ctx['about'] = field.about
+        ctx['first_name'] = field.first_name
+        ctx['last_name'] = field.last_name
 
-        posts = PostPage.objects.live().filter(owner=request.user)
+    posts = PostPage.objects.live().filter(owner=user[0])
 
     return render(request, 'users/userprofile_page.html',
-                  {'user': user, 'about': about, 'last_name': last_name, 'first_name': first_name,
-                   'username': username, 'posts': posts})
+                  {'user': user, 'username': username, 'posts': posts, **ctx})

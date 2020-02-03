@@ -7,28 +7,27 @@
         <div class="container">
             <div class="row equalize xs-equalize-auto">
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
-                    <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Posty użytkownika {{username}}</h5>
+                    <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Posty użytkownika {{ username }}</h5>
                 </div>
             </div>
         </div>
     </section>
 
      <section class="wow fadeIn">
-        <div class="container">
-            <div class="row equalize xs-equalize-auto">
-                {% for post in posts %}
-
-                    <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
-                        <div class="blog-post blog-post-style2">
-                            <div class="post-details">
-                                <div class="tag-cloud">
-                                    {% with categories=post.categories.all %}
-                                        <div class="tag-cloud">
-                                            {% if categories %}
-                                                {% for category in categories %}
-                                                    <a class="tag-cloud">{{ category.name }}</a>
-                                                {% endfor %}
-                                            {% endif %}
+         <div class="container">
+             <div class="row equalize xs-equalize-auto">
+                 {% for post in posts %}
+                     <div class="grid-item col-md-4 col-sm-6 col-xs-12 margin-30px-bottom xs-text-center wow fadeInUp">
+                         <div class="blog-post blog-post-style2">
+                             <div class="post-details">
+                                 <div class="tag-cloud">
+                                     {% with categories=post.categories.all %}
+                                         <div class="tag-cloud">
+                                             {% if categories %}
+                                                 {% for category in categories %}
+                                                     <a class="tag-cloud">{{ category.name }}</a>
+                                                 {% endfor %}
+                                             {% endif %}
                                         </div>
                                     {% endwith %}
                                 </div>

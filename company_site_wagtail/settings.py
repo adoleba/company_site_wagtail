@@ -155,3 +155,7 @@ MEDIA_URL = '/media/'
 SITE_ID = 1
 
 AUTH_USER_MODEL = 'users.User'
+
+WAGTAIL_USER_EDIT_FORM = 'users.forms.CustomUserEditForm'
+WAGTAIL_USER_CREATION_FORM = 'users.forms.CustomUserCreationForm'
+WAGTAIL_USER_CUSTOM_FIELDS = ['country', 'about', 'sex', 'birth_date']

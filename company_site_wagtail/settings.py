@@ -39,6 +39,7 @@ WAGTAIL_SITE_NAME = 'company_site_wagtail'
 INSTALLED_APPS = [
     'home',
     'blog',
+    'users',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -152,3 +153,5 @@ MEDIA_URL = '/media/'
 
 
 SITE_ID = 1
+
+AUTH_USER_MODEL = 'users.User'

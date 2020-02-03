@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="wow fadeIn bg-light-gray padding-75px-tb page-title-small top-space">
+        <div class="container">
+            <div class="row equalize xs-equalize-auto">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
+                    <span class="display-block text-black opacity6 alt-font margin-5px-bottom">{{ page.title_description }}</span>
+                    <h1 class="alt-font text-black font-weight-600 no-margin-bottom">{{ page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wow fadeIn animated animated">
+        <div class="container">
+            <div class="row equalize sm-equalize-auto">
+                <div class="col-md-5 col-sm-12 col-xs-12 text-center sm-margin-30px-bottom wow fadeInLeft">
+                    <div class="display-table width-100 height-100">
+                        <div class="display-table-cell vertical-align-middle width-100 height-100">
+                            <img src="http://placehold.it/900x650" alt="" class="border-radius-6 width-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="display-table width-100 height-100">
+                        <div class="display-table-cell vertical-align-middle padding-twelve-lr sm-text-center sm-no-padding width-100">
+                            <span class="text-deep-pink alt-font margin-10px-bottom display-inline-block text-medium">{{ page.red_intro }}</span>
+                            <h6 class="alt-font text-extra-dark-gray">{{ page.black_intro }}</h6>
+                            <p>{{ page.intro_description }}</p>
+                            <a href="#" class="btn btn-dark-gray btn-small text-extra-small btn-rounded margin-5px-top">
+                                <i class="fas fa-play-circle icon-very-small margin-5px-right no-margin-left" aria-hidden="true"></i> Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-full bg-extra-light-gray margin-seven-bottom margin-eight-top"></div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12 xs-margin-15px-bottom xs-text-center wow fadeInUp">
+                    <div class="col-md-3 col-sm-4 col-xs-12 no-padding-left xs-no-padding-lr pull-left xs-margin-15px-bottom">
+                        <i class="icon-desktop text-medium-gray icon-extra-medium top-6"></i>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12 no-padding">
+                        <span class="margin-5px-bottom text-extra-dark-gray alt-font display-block font-weight-600">{{ page.first_offer }}</span>
+                        <p class="width-75 md-width-100">{{ page.first_offer_description }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 xs-margin-15px-bottom xs-text-center wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-md-3 col-sm-4 col-xs-12 no-padding-left xs-no-padding-lr pull-left xs-margin-15px-bottom">
+                        <i class="icon-book-open text-medium-gray icon-extra-medium top-6"></i>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12 no-padding">
+                        <span class="margin-5px-bottom text-extra-dark-gray alt-font display-block font-weight-600">{{ page.second_offer }}</span>
+                        <p class="width-75 md-width-100">{{ page.second_offer_description }}.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 xs-text-center wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-md-3 col-sm-4 col-xs-12 no-padding-left xs-no-padding-lr pull-left xs-margin-15px-bottom">
+                        <i class="icon-gift text-medium-gray icon-extra-medium top-6"></i>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12 no-padding">
+                        <span class="margin-5px-bottom text-extra-dark-gray alt-font display-block font-weight-600">{{ page.third_offer }}</span>
+                        <p class="width-75 md-width-100">{{ page.third_offer_description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-extra-dark-gray wow fadeIn md-padding-two-lr">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 feature-box-1 xs-margin-30px-bottom wow fadeInRight">
+                    <div class="col-md-12 col-sm-12 no-padding margin-15px-bottom alt-font">
+                        <h3 class="char-value letter-spacing-minus-1 text-medium-gray font-weight-300">01.</h3>
+                        <span class="text-large line-height-22 padding-20px-left sm-padding-15px width-100 display-table-cell vertical-align-middle">{{ page.first_step }}</span>
+                    </div>
+                    <p class="width-90 md-width-100">{{ page.first_step_description }}</p>
+                    <div class="clearfix"></div>
+                    <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top"></div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 feature-box-1 xs-margin-30px-bottom  wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="col-md-12 col-sm-12 no-padding margin-15px-bottom alt-font">
+                        <h3 class="char-value letter-spacing-minus-1 text-medium-gray font-weight-300">02.</h3>
+                        <span class="text-large line-height-22 padding-20px-left width-100 display-table-cell vertical-align-middle">{{ page.second_step }}</span>
+                    </div>
+                    <p class="width-90 md-width-100">{{ page.second_step_description }}</p>
+                    <div class="clearfix"></div>
+                    <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top"></div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 feature-box-1  wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="col-md-12 col-sm-12 no-padding margin-15px-bottom alt-font">
+                        <h3 class="char-value letter-spacing-minus-1 text-medium-gray font-weight-300">03.</h3>
+                        <span class="text-large line-height-22 padding-20px-left width-100 display-table-cell vertical-align-middle">{{ page.third_step }}</span>
+                    </div>
+                    <p class="width-90 md-width-100">{{ page.third_step_description }}</p>
+                    <div class="clearfix"></div>
+                    <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wow fadeIn last-paragraph-no-margin">
+        <div class="container">
+            <div class="row equalize sm-equalize-auto">
+                <div class="col-md-4 display-table sm-margin-15px-bottom">
+                    <div class="display-table-cell vertical-align-middle">
+                        <span class="text-extra-large text-extra-dark-gray alt-font width-90 display-block">{{ page.summary_description }}</span>
+                    </div>
+                </div>
+                <div class="col-md-4 display-table sm-margin-15px-bottom">
+                    <div class="display-table-cell vertical-align-middle">
+                        <strong class="font-weight-600 text-extra-dark-gray margin-5px-bottom display-block alt-font">{{ page.summary_first }}</strong>
+                        <p>{{ page.summary_first_description }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 display-table">
+                    <div class="display-table-cell vertical-align-middle">
+                        <strong class="font-weight-600 text-extra-dark-gray margin-5px-bottom display-block alt-font">{{ page.summary_second }}</strong>
+                        <p>{{ page.summary_second_description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

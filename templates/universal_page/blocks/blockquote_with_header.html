@@ -1,17 +1,18 @@
+{% load block_tags %}
+
 <section class="wow fadeIn">
     <div class="container">
         <div class="row">
             <div class="col-md-9 center-col last-paragraph-no-margin xs-text-center">
                 {% with blocks=self %}
-                    {% for block in blocks %}
-                        {% if block.block_type == 'header_text' %}
-                            <h5 class="alt-font font-weight-600 text-extra-dark-gray">
-                                {{ block.value }}</h5>
-                        {% elif block.block_type == 'paragraph_text' %}
-                            <p class="text-large line-height-30 text-medium-gray text-justify xs-text-center xs-line-height-26">
-                                {{ block.value }}</p>
-                        {% endif %}
-                    {% endfor %}
+                    <h5 class="alt-font font-weight-600 text-extra-dark-gray">
+                        {% block_value blocks 'header_text' %}
+                    </h5>
+
+                    <p class="text-large line-height-30 text-medium-gray text-justify xs-text-center xs-line-height-26">
+                        {% block_value blocks 'paragraph_text' %}
+                    </p>
+
                 {% endwith %}
             </div>
         </div>

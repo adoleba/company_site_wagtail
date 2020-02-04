@@ -31,7 +31,9 @@
                         <div class="padding-45px-all sm-padding-15px-all inner-match-height">
                             <span class="text-extra-dark-gray font-weight-600 display-block alt-font margin-10px-bottom">{{ page.first_card_title }}</span>
                             <p>{{ page.first_card_description }}</p>
-                            <a href="#" class="btn btn-small btn-rounded btn-transparent-dark-gray">About Us <i class="ti-arrow-right"></i></a>
+                            <a href="{{ page.first_card_button_url.slug }}" class="btn btn-small btn-rounded btn-transparent-dark-gray">
+                                {{ page.first_card_button_text }}<i class="ti-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -41,7 +43,9 @@
                         <div class="padding-45px-all sm-padding-15px-all inner-match-height">
                             <span class="text-extra-dark-gray font-weight-600 display-block alt-font margin-10px-bottom">{{ page.second_card_title }}</span>
                             <p>{{ page.second_card_description }}</p>
-                            <a href="#" class="btn btn-small btn-rounded btn-transparent-dark-gray">Contact Us <i class="ti-arrow-right"></i></a>
+                            <a href="{{ page.second_card_button_url.slug }}" class="btn btn-small btn-rounded btn-transparent-dark-gray">
+                                {{ page.second_card_button_text }}<i class="ti-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +55,9 @@
                         <div class="padding-45px-all sm-padding-15px-all inner-match-height">
                             <span class="text-extra-dark-gray font-weight-600 display-block alt-font margin-10px-bottom">{{ page.third_card_title }}</span>
                             <p>{{ page.third_card_description }}</p>
-                            <a href="#" class="btn btn-small btn-rounded btn-transparent-dark-gray">Blog <i class="ti-arrow-right"></i></a>
+                            <a href="{{ page.third_card_button_url.slug }}" class="btn btn-small btn-rounded btn-transparent-dark-gray">
+                                {{ page.third_card_button_text }}<i class="ti-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

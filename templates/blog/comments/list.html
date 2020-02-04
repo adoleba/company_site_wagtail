@@ -6,7 +6,7 @@
 
                     <ul class="blog-comment">
                         {% get_comment_list for page as comment_list %}
-                        {% for comment in comment_list %}
+                        {% for comment in comment_list reversed %}
                             <li>
                                 <div class="display-table width-100">
                                     <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">

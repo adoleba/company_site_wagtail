@@ -1,3 +1,5 @@
+{% load static %}
+
 <section class="wow fadeIn">
     <div class="container">
         <div class="row">
@@ -26,3 +28,22 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript">
+$(document).ready(function( ) {
+    $('.panel-body').hide();
+    $(".panel-heading").click(function () {
+        $(this).next().toggle(
+
+        );
+        if ($('.panel-body').is(':visible')) {
+            $('.panel-title > span > i', this).switchClass('ti-plus', 'ti-minus');
+        } else {
+            $('.panel-title > span > i', this).switchClass('ti-minus', 'ti-plus');
+        }
+
+    });
+
+})
+</script>

@@ -12,6 +12,8 @@
                 {% include 'universal_page/blocks/blockquote.html' %}
             {% elif block.block_type == 'small_grey_header' %}
                 {% include 'universal_page/blocks/small_grey_header.html' %}
+            {% elif block.block_type == 'paragraph' %}
+                {% include 'universal_page/blocks/paragraph.html' %}
 
             {% else %}
                 <section class="block-{{ block.block_type }}">

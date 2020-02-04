@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'users',
     'contact',
     'about',
+    'universal_page',
 
     'django.contrib.admin',
     'django.contrib.auth',

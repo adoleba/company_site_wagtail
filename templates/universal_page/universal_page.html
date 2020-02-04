@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% with blocks=self.body %}
+        {% for block in blocks %}
+            {% if block.block_type == 'grey_header' %}
+                {% include 'universal_page/blocks/grey_header.html'%}
+            {% elif block.block_type == 'blockquote' %}
+                {% include 'universal_page/blocks/blockquote.html' %}
+            {% elif block.block_type == 'small_grey_header' %}
+                {% include 'universal_page/blocks/small_grey_header.html' %}
+            {% elif block.block_type == 'paragraph' %}
+                {% include 'universal_page/blocks/paragraph.html' %}
+
+            {% else %}
+                <section class="block-{{ block.block_type }}">
+                    {{ block }}
+                </section>
+
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+
+{% endblock %}

@@ -30,9 +30,9 @@ class Faq(blocks.StreamBlock):
         template = 'universal_page/blocks/faq.html'
 
 
-class BlockQuoteWithHeader(blocks.StreamBlock):
+class ParagraphWithHeader(blocks.StreamBlock):
     header_text = blocks.RichTextBlock(classname="header text")
     paragraph_text = blocks.RichTextBlock(classname="paragraph text")
 
     class Meta:
-        template = 'universal_page/blocks/blockquote_with_header.html'
+        template = 'universal_page/blocks/paragraph_with_header.html'

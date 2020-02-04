@@ -13,7 +13,7 @@
                                         <p class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">
                                             {{ comment.user_name }}</p>
                                         <div class="text-small text-medium-gray text-uppercase margin-10px-bottom">
-                                            {{ comment.submit_date }}</div>
+                                            {{ comment.submit_date|date:"d.m.Y H:i" }}</div>
                                         <p>{{ comment.comment }}</p>
                                     </div>
                                 </div>

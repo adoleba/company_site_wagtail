@@ -6,14 +6,14 @@
 
                     <ul class="blog-comment">
                         {% get_comment_list for page as comment_list %}
-                        {% for comment in comment_list %}
+                        {% for comment in comment_list reversed %}
                             <li>
                                 <div class="display-table width-100">
                                     <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
                                         <p class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">
                                             {{ comment.user_name }}</p>
                                         <div class="text-small text-medium-gray text-uppercase margin-10px-bottom">
-                                            {{ comment.submit_date }}</div>
+                                            {{ comment.submit_date|date:"d.m.Y H:i" }}</div>
                                         <p>{{ comment.comment }}</p>
                                     </div>
                                 </div>

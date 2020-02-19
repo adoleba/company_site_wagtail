@@ -7,7 +7,7 @@ from users.models import User
 def user_profile(request, username):
     user = User.objects.get(username=username)
 
-    posts = PostPage.objects.live().filter(owner=user)
+    posts = PostPage.objects.live().filter(owner=user).order_by('-first_published_at')
 
     return render(request, 'users/userprofile_page.html',
                   {'user': user, 'username': username, 'posts': posts})

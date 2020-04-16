@@ -279,3 +279,5 @@ dmypy.json
 *.iml
 out
 gen
+
+staticfiles/

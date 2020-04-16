@@ -1,0 +1,1 @@
+web: gunicorn company_site_wagtail.wsgi --log-file -

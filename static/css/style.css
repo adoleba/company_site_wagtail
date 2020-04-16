@@ -2839,8 +2839,6 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 .scroll-down a {background: #232323; display: inline-block; height: 57px; width: 57px; text-align: center}
 .scroll-down a i.scroll-arrow-down {vertical-align: top; background-image: url('../images/scroll-down-icon.png'); width: 17px; height: 30px; display: inline-block}
 .scroll-down a:hover {background:#fff;}
-.scroll-to-down {cursor:url("../images/arrow-down.png"), pointer;}
-.scroll-to-down-white {cursor:url("../images/arrow-down-white.png"), pointer;}
 .background-slider-text {position: absolute; width: 100%}
 
 /* cursor */ 

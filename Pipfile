@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==2.2.8"
+django = "==2.2.13"
 wagtail = "==2.7.1"
 django-environ = "==0.4.5"
 django-el-pagination = "==3.2.4"

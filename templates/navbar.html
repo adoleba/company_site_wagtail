@@ -5,7 +5,7 @@
         <div class="container-fluid nav-header-container">
             <div class="row">
                 <div class="col-md-2 col-xs-5">
-                    <a href="{% pageurl request.site.root_page %}">Logo</a>
+                    <a href="{% pageurl Site.find_for_request(request).root_page %}">Logo</a>
                 </div>
 
                 {% main_menu template="menu.html" %}

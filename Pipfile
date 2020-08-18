@@ -9,7 +9,7 @@ verify_ssl = true
 django = "==2.2.8"
 wagtail = "==2.10"
 django-environ = "==0.4.5"
-django-el-pagination = "==3.2.4"
+django-el-pagination = "==3.3.0"
 django-contrib-comments = "==1.9.2"
 wagtailmenus = "==3.0.2"
 django-widget-tweaks = "==1.4.5"

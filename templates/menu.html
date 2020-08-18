@@ -10,7 +10,7 @@
         <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
             <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
                 <li class="dropdown megamenu-fw">
-                    <a href="{% pageurl Site.find_for_request(request).root_page %}">Home</a>
+                    <a href="{% pageurl page.get_site.root_page %}">Home</a>
                 </li>
 
                 {% for item in menu_items %}

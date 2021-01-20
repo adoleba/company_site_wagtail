@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row equalize xs-equalize-auto">
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
-                    <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Posty użytkownika {{ username }}</h5>
+                    <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">{{ username }}'s posts</h5>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                                 </div>
 
                                 <span class="text-large alt-font width-85 md-width-95 margin-15px-bottom display-block">
-                                    <a href="{% pageurl post %}" class="text-extra-dark-gray">{{post.title}}</a>
+                                    <a href="{% pageurl post %}" class="text-extra-dark-gray">{{ post.title }}</a>
                                 </span>
                                 <p class="width-90 xs-margin-15px-bottom xs-width-100">
                                     {% if post.intro %}
